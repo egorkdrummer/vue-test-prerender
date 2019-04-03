@@ -29,7 +29,7 @@ export default new Router({
 
 const routesDetails = routes.reduce((acc, curr) => {
   acc.push({
-    path: curr.path,
+    path: curr.path + "/",
     name: curr.name
   });
   return acc;
