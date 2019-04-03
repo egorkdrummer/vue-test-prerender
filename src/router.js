@@ -26,3 +26,13 @@ export default new Router({
   base: process.env.BASE_URL,
   routes
 });
+
+const routesDetails = routes.reduce((acc, curr) => {
+  acc.push({
+    path: curr.path,
+    name: curr.name
+  });
+  return acc;
+}, []);
+
+export { routesDetails };
